@@ -1,11 +1,13 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import ButtonComponent from "../../components/Buttons";
 import { Container, Logo, Title, SubTitle, Rules } from "./styles";
 
 const Start = () => {
+    const navigation = useNavigation()
     const handleNavToPlayAlone = () => console.log('foi')
     const handleNavToPlayTogether = () => console.log('foi 2')
-    const handleNavToRules = () => console.log('foi 3')
+    const handleNavToRules = () => navigation.navigate('Rules')
     return (
         <Container>
             <Logo source={require("../../assets/logoDark.png")} style={{ resizeMode: "contain" }}/>

@@ -16,5 +16,5 @@ export const Button = styled.TouchableOpacity`
 export const ButtonContent = styled.Text`
     font-size: ${RFValue(20)}px;
     color: black;
-    font-family: sans-serif;
+    font-family: ${({theme}) => theme.fonts.regular};
 `

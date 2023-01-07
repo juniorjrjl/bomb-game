@@ -4,8 +4,8 @@ import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
 export const Container = styled.View`
     flex: 1;
-    padding-top: ${getStatusBarHeight() + RFValue(50)}px;
-    background-color: #131313;
+    padding-top: ${getStatusBarHeight() + RFValue(20)}px;
+    background-color: ${({theme}) => theme.colors.backgound};
 `
 export const Logo = styled.Image`
     width: ${RFValue(270)}px;
@@ -17,22 +17,22 @@ export const Title = styled.Text`
     margin-top: ${RFValue(70)}px;
     margin-bottom: ${RFValue(110)}px;
     font-size: ${RFValue(32)}px;
-    font-family: sans-serif;
+    font-family: ${({theme}) => theme.fonts.bold};
     text-align: center;
-    color: white;
+    color: ${({theme}) => theme.colors.white};
+    font-weight: bold;
 `
 
 export const SubTitle = styled.Text`
     font-size: ${RFValue(16)}px;
-    font-family: sans-serif;
+    font-family: ${({theme}) => theme.fonts.regular};
     text-align: center;
-    color: white;
+    color: ${({theme}) => theme.colors.backgound};
 `
 export const Rules = styled.Text`
     margin-top: ${RFValue(80)}px;
     font-size: ${RFValue(16)}px;
-    font-family: sans-serif;
+    font-family: ${({theme}) => theme.fonts.bold};
     text-align: center;
-    color: white;
-    font-weight: bold;
+    color: ${({theme}) => theme.colors.backgound};
 `

@@ -1,8 +1,10 @@
 import React from "react";
 import { Container, ScrollTextRules, Title, Icon, Paragraph, NumberParagraph } from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 const Rules = () =>{
-    const handleNavTostart = () => console.log('1')
+    const navigation = useNavigation()
+    const handleNavTostart = () => navigation.navigate('Start')
 
     return(
         <Container>
