@@ -9,7 +9,7 @@ import { ThemeProvider } from 'styled-components';
 import { View } from 'react-native';
 
 const App = () => {
-    const [fontsLoaded] = useFonts(Roboto_400Regular, Roboto_500Medium, Roboto_700Bold)
+    const [fontsLoaded] = useFonts({Roboto_400Regular, Roboto_500Medium, Roboto_700Bold})
     useEffect(() => {
         async function prepare() {
             await SplashScreen.preventAutoHideAsync();
@@ -24,9 +24,9 @@ const App = () => {
         }
     }, [fontsLoaded]);
 
-    //if (!fontsLoaded){
-    //    return null
-    //}
+    if (!fontsLoaded){
+        return null
+    }
 
     return  (
         <View onLayout={onLayoutRootView} style={{ flex: 1 }}>

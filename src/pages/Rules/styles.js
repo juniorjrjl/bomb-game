@@ -7,7 +7,7 @@ export const Container = styled.View`
     flex: 1;
     padding: 0px ${RFValue(40)}px;
     padding-top: ${getStatusBarHeight() + RFValue(20)}px;
-    background-color: ${({theme}) => theme.colors.backgound};
+    background-color: ${({theme}) => theme.colors.background};
 `
 
 export const Icon = styled(MaterialIcons)`
