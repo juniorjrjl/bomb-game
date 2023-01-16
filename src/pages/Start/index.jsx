@@ -5,7 +5,7 @@ import { Container, Logo, Title, SubTitle, Rules } from "./styles";
 
 const Start = () => {
     const navigation = useNavigation()
-    const handleNavToPlayAlone = () => console.log('foi')
+    const handleNavToPlayAlone = () => navigation.navigate('PlayAlone')
     const handleNavToPlayTogether = () => console.log('foi 2')
     const handleNavToRules = () => navigation.navigate('Rules')
     return (
