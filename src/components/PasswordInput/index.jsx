@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Keyboard } from "react-native";
-import { Container, Input, InputContainer } from "./styles";
+import { Container, Input, InputContainer } from "./styled";
 
 const PasswordInput = ({pin, setPin, started}) =>{
     const input1 = useRef()

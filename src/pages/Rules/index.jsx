@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ScrollTextRules, Title, Icon, Paragraph, NumberParagraph } from "./styles";
+import { Container, ScrollTextRules, Title, Icon, Paragraph, NumberParagraph } from "./styled";
 import { useNavigation } from "@react-navigation/native";
 
 const Rules = () =>{

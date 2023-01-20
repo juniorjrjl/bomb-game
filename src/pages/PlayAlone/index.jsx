@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
-import { Container, TextTimer, Timer, TipContainer, TipText, TipTitle, Title } from "./styles";
+import { Container, TextTimer, Timer, TipContainer, TipText, TipTitle, Title } from "./styled";
 import ButtonComponent from "../../components/Buttons";
 
 import bombImg from '../../assets/bomba.png'

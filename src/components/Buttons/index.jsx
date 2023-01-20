@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonContent } from "./styles";
+import { Button, ButtonContent } from "./styled";
 import { Text } from 'react-native';
 
 const ButtonComponent = ({ handlePress, children }) =>

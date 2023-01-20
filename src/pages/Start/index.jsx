@@ -1,12 +1,12 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import ButtonComponent from "../../components/Buttons";
-import { Container, Logo, Title, SubTitle, Rules } from "./styles";
+import { Container, Logo, Title, SubTitle, Rules } from "./styled";
 
 const Start = () => {
     const navigation = useNavigation()
     const handleNavToPlayAlone = () => navigation.navigate('PlayAlone')
-    const handleNavToPlayTogether = () => console.log('foi 2')
+    const handleNavToPlayTogether = () => navigation.navigate('PlayTogether')
     const handleNavToRules = () => navigation.navigate('Rules')
     return (
         <Container>
