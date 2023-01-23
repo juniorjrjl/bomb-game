@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
-    margin: ${RFValue(50)}px ${RFValue(30)}px;
+    margin: ${RFValue(30)}px ${RFValue(30)}px;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
@@ -22,5 +22,5 @@ export const Input = styled.TextInput`
     text-align: center;
     border-radius: ${RFValue(5)}px;
     width: 100%;
-    background-color: ${( props ) => props.abled ? "trasparent" : "#9999998c"};
+    background-color: ${(props) => props.abled === false ? "#9999998c": "transparent"};
 `
