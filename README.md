@@ -17,6 +17,13 @@ Api de vagas de emprego
 
 Rode o seguinte comando:
 
+inicie o json-server 
+```
+yarn jsonServer
+```
+
+inicie a aplicação
+
 ```
 expo start
 ```

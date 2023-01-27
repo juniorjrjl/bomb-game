@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import { ImageBackground } from "react-native";
+import { ImageBackground, Keyboard } from "react-native";
 import bombImg from "../../../assets/bomba.png"
 import { Input, InputContainer, Timer, TextTimer } from "./styled";
 
-const InputTimer = () =>{
+const InputTimer = ({ hours, minutes, seconds, setHours, setMinutes, setSeconds }) =>{
     const input1 = useRef()
     const input2 = useRef()
     const input3 = useRef()
@@ -17,23 +17,23 @@ const InputTimer = () =>{
             } }>
                 <Timer>
                     <InputContainer>
-                        <Input Type={"number-pad"} maxLength={2} placeholder="00" placeholderTextColor="#bbb" ref={input1} onChangeText={(value) => {
+                        <Input keyboardType={"number-pad"} maxLength={2} placeholder="00" placeholderTextColor="#bbb" ref={input1} value={hours} onChangeText={(value) => {
                             value.lenght >1 && input2.current.focus()
-                            hoursInput(value)
+                            setHours(value)
                         }}/>
                     </InputContainer>
                     <TextTimer>:</TextTimer>
                     <InputContainer>
-                        <Input keyboardType={"number-pad"} maxLength={2} placeholder="00" placeholderTextColor="#bbb" ref={input2} onChangeText={(value) => {
+                        <Input keyboardType={"number-pad"} maxLength={2} placeholder="00" placeholderTextColor="#bbb" ref={input2} value={minutes} onChangeText={(value) => {
                             value.lenght >1 && input3.current.focus()
-                            minutesInput(value)
+                            setMinutes(value)
                         }}/>
                     </InputContainer>
                     <TextTimer>:</TextTimer>
                     <InputContainer>
-                        <Input keyboardType={"number-pad"} maxLength={2} placeholder="00" placeholderTextColor="#bbb" ref={input3} onChangeText={(value) => {
+                        <Input keyboardType={"number-pad"} maxLength={2} placeholder="00" placeholderTextColor="#bbb" ref={input3} value={seconds} onChangeText={(value) => {
                             value.length > 1 && Keyboard.dismiss();
-                            secondsInput(value);
+                            setSeconds(value);
                         }}/>
                     </InputContainer>
                 </Timer>
